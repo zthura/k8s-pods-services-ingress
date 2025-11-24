@@ -1,1 +1,10 @@
+global:
+  scrape_interval: 15s
 
+scrape_configs:
+  - job_name: 'app-a'
+    static_configs:
+      - targets: ['app-a-service:80']
+  - job_name: 'app-b'
+    static_configs:
+      - targets: ['app-b-service:80']
